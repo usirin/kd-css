@@ -1,0 +1,112 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KD Components</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    .components-container {
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+      max-width: 800px;
+    }
+    .spacer {
+      height: 20px
+    }
+    .background-colors p {
+      color: #fff;
+      padding-left: 16px;
+      margin-top: 16px;
+      border-radius: 4px
+    }
+  </style>
+  <script src="//use.typekit.net/ruh0edt.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+<div class="components-container">
+  <h1>Heading h1<small>secondary text</small></h1>
+  <h2>Heading h2<small>secondary text</small></h2>
+  <h3>Heading h3<small>secondary text</small></h3>
+  <h4>Heading h4<small>secondary text</small></h4>
+  <h5>Heading h5<small>secondary text</small></h5>
+  <h6>Heading h6<small>secondary text</small></h6>
+</div>
+<div class="components-container">
+  <h3>Paragraph & inline-element styles</h3>
+  <p>
+    Lorem ipsum dolor <mark>sit amet</mark>, consectetur adipiscing elit. Sed mattis velit in pretium hendrerit. Quisque finibus eget nibh vitae vulputate. Ut tellus nisl, viverra eu est accumsan, fringilla euismod massa. Ut iaculis velit enim, ut tincidunt dui vestibulum at. Duis eget aliquet lectus. Curabitur placerat vel enim vitae lobortis. <a href="#">Aenean sit amet volutpat</a> magna. In nec venenatis nulla, a fermentum justo. Maecenas eu massa vel ipsum aliquam gravida. In semper enim id neque convallis tempus ut id enim. Praesent nunc mauris, aliquam vitae condimentum nec, <strong>pretium id nisl</strong>. Cum <em>sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</em>
+  </p>
+  <p>
+    <del>Integer tincidunt molestie purus sodales auctor</del>. Proin sapien est, accumsan vitae blandit vitae, eleifend ut ipsum. Aenean accumsan fermentum ex, vitae ullamcorper massa porta quis. Proin vel est sed lorem volutpat varius id ut ante. <small>Donec nec neque neque. Aenean vehicula blandit quam sit amet aliquam. Proin aliquet finibus mattis. Maecenas at elit sed tortor varius ultrices nec a enim. Donec viverra turpis quis lectus dapibus, sit amet maximus arcu efficitur. Ut id orci eget elit interdum rhoncus.</small> Sed nisi felis, elementum vel nunc et, porttitor faucibus augue. Nullam iaculis, massa id mollis auctor, nibh ante efficitur velit, ac posuere augue massa id sapien.
+  </p>
+
+  <blockquote>
+    <p>In diam nisl, mollis vitae quam quis, mattis tristique tellus. Pellentesque egestas sem non rutrum rhoncus.</p>
+    <footer>Aliquam et consectetur ligula 10:24</footer>
+  </blockquote>
+
+  <p>
+    In diam nisl, mollis vitae quam quis, mattis tristique tellus. Pellentesque egestas sem non rutrum rhoncus. Integer sed vulputate erat. Sed vehicula ligula euismod, blandit nibh id, finibus nisi. Nunc pulvinar arcu eget nisl volutpat, vel ultricies lacus elementum. Sed lorem libero, sollicitudin ut ante a, condimentum volutpat felis. Aliquam et consectetur ligula. Duis maximus sit amet ex et varius. Phasellus rutrum cursus massa non mattis.
+  </p>
+</div>
+<div class="components-container">
+  <button class="Button">BUTTON</button>
+  <a class="Button" href="#">BUTTON Link</a>
+  <input type="submit" class="Button" value="INPUT BUTTON">
+</div>
+<div class="components-container">
+  <h5>Small Buttons</h5>
+  <p>
+    <button class="Button Button--small">BUTTON</button>
+    <button class="Button Button--primary Button--small">BUTTON</button>
+    <button class="Button Button--secondary Button--small">BUTTON</button>
+    <button class="Button Button--warning Button--small">BUTTON</button>
+    <button class="Button Button--danger Button--small">BUTTON</button>
+    <button class="Button Button--cancel Button--small">BUTTON</button>
+    <button class="Button Button--disabled Button--small">BUTTON</button>
+  </p>
+</div>
+<div class="components-container">
+  <h5>Regular Buttons</h5>
+  <p>
+    <button class="Button">BUTTON</button>
+    <button class="Button Button--primary">BUTTON</button>
+    <button class="Button Button--secondary">BUTTON</button>
+    <button class="Button Button--warning">BUTTON</button>
+    <button class="Button Button--danger">BUTTON</button>
+    <button class="Button Button--cancel">BUTTON</button>
+    <button class="Button Button--disabled">BUTTON</button>
+  </p>
+</div>
+<div class="components-container">
+  <h5>Big Buttons</h5>
+  <p>
+    <button class="Button Button--big">BUTTON</button>
+    <button class="Button Button--primary Button--big">BUTTON</button>
+    <button class="Button Button--secondary Button--big">BUTTON</button>
+    <button class="Button Button--warning Button--big">BUTTON</button>
+    <button class="Button Button--danger Button--big">BUTTON</button>
+    <button class="Button Button--cancel Button--big">BUTTON</button>
+    <button class="Button Button--disabled Button--big">BUTTON</button>
+  </p>
+</div>
+<div class="components-container">
+  <h5>Contextual Colors</h5>
+  <p class="u-color-success">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-color-warning">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-color-danger">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-color-info">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-color-disabled">Integer tincidunt molestie purus sodales auctor</p>
+</div>
+<div class="components-container background-colors">
+  <h5>Contextual Background Colors</h5>
+  <p class="u-bg-color-success">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-bg-color-warning">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-bg-color-danger">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-bg-color-info">Integer tincidunt molestie purus sodales auctor</p>
+  <p class="u-bg-color-disabled">Integer tincidunt molestie purus sodales auctor</p>
+</div>
+</body>
+</html>

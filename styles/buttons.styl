@@ -1,0 +1,70 @@
+@css {
+/*
+Button styles
+-----------------------------
+buttons.styl
+*/
+}
+
+@import 'colors'
+@import 'typography'
+
+buttonColorModifier(bgColor, color, disabled = false)
+  background-color          bgColor
+  color                     color
+  border-color              getBorderColor(bgColor)
+
+  &:hover
+    if disabled
+      background-color      bgColor
+    else
+      background-color      getAlternateColor(bgColor, 'darken')
+
+  &:active
+  &.is-active
+    if disabled
+      background-color      bgColor
+    else
+      background-color      getAlternateColor(bgColor, 'lighten')
+
+
+.Button
+  font-family               $adelle-family
+  display                   inline-block
+  letter-spacing            0.05em
+  padding                   6px 12px
+  font-size                 1.0rem
+  font-weight               $fw-semibold
+  border-radius             $border-radius
+  outline                   none
+  border                    1px solid
+  text-decoration           none
+  text-transform            uppercase
+  buttonColorModifier($white, $color-primary-text)
+
+.Button--primary
+  buttonColorModifier($color-primary-action, $white)
+
+.Button--secondary
+  buttonColorModifier($color-secondary-action, $white)
+
+.Button--warning
+  buttonColorModifier($color-warning-action, $white)
+
+.Button--danger
+  buttonColorModifier($color-danger-action, $white)
+
+.Button--cancel
+  buttonColorModifier($color-cancel-action, $white)
+
+.Button--disabled
+  buttonColorModifier($color-disabled-action, $white, true)
+
+
+.Button--small
+  font-size                 0.8rem
+  padding                   4px 10px
+
+.Button--big
+  font-size                 1.2rem
+  padding                   8px 14px
