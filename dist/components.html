@@ -21,6 +21,7 @@
       border-radius: 4px
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//use.typekit.net/ruh0edt.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
@@ -34,7 +35,7 @@
   <h6>Heading h6<small>secondary text</small></h6>
 </div>
 <div class="components-container">
-  <h3>Paragraph & inline-element styles</h3>
+  <h5>Paragraph & inline-element styles</h5>
   <p>
     Lorem ipsum dolor <mark>sit amet</mark>, consectetur adipiscing elit. Sed mattis velit in pretium hendrerit. Quisque finibus eget nibh vitae vulputate. Ut tellus nisl, viverra eu est accumsan, fringilla euismod massa. Ut iaculis velit enim, ut tincidunt dui vestibulum at. Duis eget aliquet lectus. Curabitur placerat vel enim vitae lobortis. <a href="#">Aenean sit amet volutpat</a> magna. In nec venenatis nulla, a fermentum justo. Maecenas eu massa vel ipsum aliquam gravida. In semper enim id neque convallis tempus ut id enim. Praesent nunc mauris, aliquam vitae condimentum nec, <strong>pretium id nisl</strong>. Cum <em>sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</em>
   </p>
@@ -108,5 +109,116 @@
   <p class="u-bg-color-info">Integer tincidunt molestie purus sodales auctor</p>
   <p class="u-bg-color-disabled">Integer tincidunt molestie purus sodales auctor</p>
 </div>
+<div class="components-container">
+  <h5>Modal</h5>
+  <button class="Button Button--big" id="showModal">Show Modal</button>
+  <button class="Button Button--big" id="showModalForm">Show Modal With a Form</button>
+</div>
+
+<div class="components-container">
+  <h5>Default form</h5>
+  <form class="Form">
+    <label class="Form-element Form-element--oneThird">
+      <span class="Form-labelText">Full name</span>
+      <input type="text" class="Form-input" placeholder="Full name">
+    </label>
+    <label class="Form-element Form-element--twoThirds">
+      <span class="Form-labelText">Email address</span>
+      <input type="email" class="Form-input" placeholder="Email address">
+    </label>
+    <label class="Form-element Form-element--oneThird">
+      <span class="Form-labelText">Username</span>
+      <input type="text" class="Form-input" placeholder="Username">
+    </label>
+    <label class="Form-element Form-element--oneThird">
+      <span class="Form-labelText">Password</span>
+      <input type="password" class="Form-input" placeholder="Password">
+    </label>
+    <label class="Form-element Form-element--oneThird">
+      <span class="Form-labelText">Password(again)</span>
+      <input type="password" class="Form-input" placeholder="Password(again)">
+    </label>
+    <label class="Form-element Form-element--pushOneThird">
+      <span class="Form-labelText">Notes</span>
+      <textarea class="Form-input" rows="3"></textarea>
+    </label>
+    <label class="Form-element Form-element--inlineLabel Form-element--pushOneThird">
+      <span class="Form-labelText">I agree all the stuff</span>
+      <input type="checkbox" class="Form-checkbox">
+    </label>
+    <div class="Form-element Form-buttons">
+      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
+      <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+    </div>
+  </form>
+</div>
+
+<div class="components-container">
+  <h5>Horizontal form<small>Elements can only be full width</small></h5>
+  <form class="Form Form--horizontal">
+    <label class="Form-element">
+      <span class="Form-labelText">Full name</span>
+      <input type="text" class="Form-input" placeholder="Full name">
+    </label>
+    <label class="Form-element">
+      <span class="Form-labelText">Email address</span>
+      <input type="email" class="Form-input" placeholder="Email address">
+    </label>
+    <div class="Form-element Form-buttons">
+      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
+      <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+    </div>
+  </form>
+</div>
+
+<div class="PageOverlay" style="display:none"></div>
+<div class="Modal" style="display:none" id="defaultModal">
+  <h4 class="Modal-title">Modal Example <small>This is a modal</small></h4>
+  <div class="Modal-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+  <div class="Modal-buttons">
+    <button class="Button Modal-Button Button--Big Button--danger">Delete</button>
+    <button class="Button Modal-Button Button--Big Button--primary">Confirm</button>
+  </div>
+</div>
+
+<div class="Modal" style="display:none" id="formModal">
+  <h4 class="Modal-title">Modal Example <small>This is a modal</small></h4>
+  <div class="Modal-content">
+    <form class="Form Form--horizontal">
+      <label class="Form-element">
+        <span class="Form-labelText">Full name</span>
+        <input type="text" class="Form-input" placeholder="Full name">
+      </label>
+      <label class="Form-element">
+        <span class="Form-labelText">Email address</span>
+        <input type="email" class="Form-input" placeholder="Email address">
+      </label>
+      <div class="Form-element Form-buttons">
+        <button class="Button Form-Button Button--Big Button--danger">Delete</button>
+        <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  $('#showModal').on('click', function(){
+    $('#defaultModal').fadeIn(200);
+    $('.PageOverlay').fadeIn(500);
+  });
+  $('#showModalForm').on('click', function(){
+    $('#formModal').fadeIn(200);
+    $('.PageOverlay').fadeIn(500);
+  });
+  $('.PageOverlay').on('click', function(){
+    $('.Modal').fadeOut(200);
+    $(this).fadeOut(500);
+  });
+</script>
+
 </body>
 </html>

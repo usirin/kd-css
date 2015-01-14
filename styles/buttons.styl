@@ -14,18 +14,12 @@ buttonColorModifier(bgColor, color, disabled = false)
   color                     color
   border-color              getBorderColor(bgColor)
 
-  &:hover
-    if disabled
-      background-color      bgColor
-    else
-      background-color      getAlternateColor(bgColor, 'darken')
-
   &:active
   &.is-active
     if disabled
       background-color      bgColor
     else
-      background-color      getAlternateColor(bgColor, 'lighten')
+      background-color      getAlternateColor(bgColor, 'darken')
 
 
 .Button

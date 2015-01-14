@@ -1,0 +1,122 @@
+@css {
+/*
+Form styles
+-----------------------------
+form.styl
+*/
+}
+
+@import 'colors'
+@import 'typography'
+@import 'buttons'
+
+.Form-labelText
+  display                   block
+  margin-bottom             8px
+  color                     $color-primary-text
+  font-weight               $fw-regular
+
+.Form-input
+  display                   block
+  width                     100%
+  padding                   9px 14px
+  outline                   none
+  resize                    none
+  border-radius             $border-radius
+  border                    1px solid $gray-17
+  background                $white
+  font-size                 $fs-regular
+  color                     $color-primary-text
+
+.Form-checkbox
+  display                   block
+  margin                    1px 6px 0 0
+  padding                   0
+  float                     left
+
+.Form-buttons
+  text-align                right
+
+.Form-Button
+  margin-left               6px
+
+.Form-element
+  display                   block
+  margin-bottom             16px
+  padding-left              8px
+  padding-right             8px
+  width                     auto
+  font-size                 $fs-regular
+  clear                     both
+
+  &:last-child
+    margin-bottom           0
+
+.Form-element--quarter
+.Form-element--oneThird
+.Form-element--twoThirds
+.Form-element--half
+  float                     left
+  clear                     initial
+
+.Form-element--quarter
+  width                     25%
+
+.Form-element--oneThird
+  width                     33.3%
+
+.Form-element--twoThirds
+  width                     66.6%
+
+.Form-element--half
+  width                     50%
+
+.Form-element--pushQuarter
+  margin-left               25%
+
+.Form-element--pushOneThird
+  margin-left               33.3%
+
+.Form-element--pushTwoThirds
+  margin-left               66.6%
+
+.Form-element--pushHalf
+  margin-left               50%
+
+.Form-element--inlineLabel
+  .Form-labelText
+    display                 inline-block
+
+.Form
+  margin-left               -8px
+  margin-right              -8px
+
+// Horizontal forms (Labels on the left and inputs on the right)
+
+.Form--horizontal
+  display                   table
+  margin-left               0
+  margin-right              0
+  width                     100%
+
+  .Form-labelText
+    display                 table-cell
+    text-align              right
+    width                   1px
+    white-space             nowrap
+    padding-right           16px
+
+  .Form-input
+    display                 table-cell
+    margin-bottom           16px
+
+  .Form-element
+    display                 table-row
+
+    &:last-child
+      .Form-input
+        margin-bottom       0
+
+  .Form-buttons:before
+    content                 ''
+    display                 table-cell
