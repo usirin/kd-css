@@ -21,6 +21,18 @@ buttonColorModifier(bgColor, color, disabled = false)
     else
       background-color      getAlternateColor(bgColor, 'darken')
 
+buttonThinColorModifier(borderColor, color, disabled = false)
+  background-color          transparent
+  color                     color
+  border-color              borderColor
+
+  &:active
+  &.is-active
+    if disabled
+      background-color      transparent
+    else
+      background-color      getAlternateColor($white, 'darken')
+
 
 .Button
   font-family               $adelle-family
@@ -54,8 +66,26 @@ buttonColorModifier(bgColor, color, disabled = false)
 .Button--disabled
   buttonColorModifier($color-disabled-action, $white, true)
 
+// Thin buttons
+.Button--primaryThin
+  buttonThinColorModifier($color-primary-action, $color-primary-action)
 
-.Button--small
+.Button--secondaryThin
+  buttonThinColorModifier($color-secondary-action, $color-secondary-action)
+
+.Button--warningThin
+  buttonThinColorModifier($color-warning-action, $color-warning-action)
+
+.Button--dangerThin
+  buttonThinColorModifier($color-danger-action, $color-danger-action)
+
+.Button--cancelThin
+  buttonThinColorModifier($color-cancel-action, $color-cancel-action)
+
+.Button--disabledThin
+  buttonThinColorModifier($color-disabled-action, $color-disabled-action, true)
+
+.Button--smallThin
   font-size                 0.8rem
   padding                   4px 10px
 
