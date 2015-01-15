@@ -21,6 +21,13 @@ buttonColorModifier(bgColor, color, disabled = false)
     else
       background-color      getAlternateColor(bgColor, 'darken')
 
+  &:focus
+    if bgColor is $white
+      box-shadow            0 0 5px getAlternateColor(bgColor, 'darken')
+
+    else
+      box-shadow            0 0 5px 1px bgColor
+
 buttonThinColorModifier(borderColor, color, disabled = false)
   background-color          transparent
   color                     color
@@ -32,6 +39,13 @@ buttonThinColorModifier(borderColor, color, disabled = false)
       background-color      transparent
     else
       background-color      getAlternateColor($white, 'darken')
+
+  &:focus
+    if borderColor is $white
+      box-shadow            0 0 5px getAlternateColor(borderColor, 'darken')
+
+    else
+      box-shadow            0 0 5px borderColor
 
 
 .Button
@@ -46,6 +60,8 @@ buttonThinColorModifier(borderColor, color, disabled = false)
   border                    1px solid
   text-decoration           none
   text-transform            uppercase
+  box-shadow                0
+  vendor(transition, box-shadow 0.1s ease)
   buttonColorModifier($white, $color-primary-text)
 
 .Button--primary

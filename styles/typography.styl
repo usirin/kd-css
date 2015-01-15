@@ -60,6 +60,7 @@ mark
 a
 .u-a
   color                     $color-brand
+  outline-color             $color-brand
 
 small
 .u-small
@@ -73,10 +74,18 @@ em
 .u-em
   font-style                italic
 
+code
+.u-code
+  padding                   .2em
+  border-radius             $border-radius
+  background-color          $color-code-bg
+  color                     $color-code
+
 
 /* Headings */
 h1, h2, h3, h4, h5, h6
 .u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6
+  display                   block
   font-weight               $fw-semibold
   line-height               $body-line-height
   color                     $color-primary-text

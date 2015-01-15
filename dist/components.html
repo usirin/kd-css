@@ -14,10 +14,11 @@
     .spacer {
       height: 20px
     }
+    .please-note,
     .background-colors p {
       color: #fff;
       padding-left: 16px;
-      margin-top: 16px;
+      margin-bottom: 16px;
       border-radius: 4px
     }
   </style>
@@ -144,6 +145,10 @@
 
 <div class="components-container">
   <h5>Default form</h5>
+  <p class="u-bg-color-info please-note">
+    <strong>Please note:</strong>
+    Using <code>accesskey</code> attribute for important inputs is highly appreciated.
+  </p>
   <form class="Form">
     <label class="Form-element Form-element--oneThird">
       <span class="Form-labelText">Full name</span>
@@ -162,7 +167,7 @@
       <input type="password" class="Form-input" placeholder="Password">
     </label>
     <label class="Form-element Form-element--oneThird">
-      <span class="Form-labelText">Password(again)</span>
+      <span class="Form-labelText">Password<small>(again)</small></span>
       <input type="password" class="Form-input" placeholder="Password(again)">
     </label>
     <label class="Form-element Form-element--pushOneThird">
@@ -174,8 +179,8 @@
       <input type="checkbox" class="Form-checkbox">
     </label>
     <div class="Form-element Form-buttons">
-      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
       <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
     </div>
   </form>
 </div>
@@ -192,8 +197,8 @@
       <input type="email" class="Form-input" placeholder="Email address">
     </label>
     <div class="Form-element Form-buttons">
-      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
       <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+      <button class="Button Form-Button Button--Big Button--danger">Delete</button>
     </div>
   </form>
 </div>
@@ -207,8 +212,8 @@
     </p>
   </div>
   <div class="Modal-buttons">
-    <button class="Button Modal-Button Button--Big Button--danger">Delete</button>
-    <button class="Button Modal-Button Button--Big Button--primary">Confirm</button>
+    <button class="Button Modal-Button Button--Big Button--primaryThin">Confirm</button>
+    <button class="Button Modal-Button Button--Big Button--dangerThin">Delete</button>
   </div>
 </div>
 
@@ -225,8 +230,8 @@
         <input type="email" class="Form-input" placeholder="Email address">
       </label>
       <div class="Form-element Form-buttons">
-        <button class="Button Form-Button Button--Big Button--danger">Delete</button>
-        <button class="Button Form-Button Button--Big Button--primary">Confirm</button>
+        <button class="Button Form-Button Button--Big Button--primaryThin">Confirm</button>
+        <button class="Button Form-Button Button--Big Button--dangerThin">Delete</button>
       </div>
     </form>
   </div>

@@ -16,6 +16,10 @@ form.styl
   color                     $color-primary-text
   font-weight               $fw-regular
 
+  small
+    color                   $color-light-text
+    margin-left             6px
+
 .Form-input
   display                   block
   width                     100%
@@ -23,10 +27,13 @@ form.styl
   outline                   none
   resize                    none
   border-radius             $border-radius
-  border                    1px solid $gray-17
+  border                    1px solid $gray-18
   background                $white
   font-size                 $fs-regular
   color                     $color-primary-text
+
+  &:focus
+    border-color            $gray-14
 
 .Form-checkbox
   display                   block
@@ -36,6 +43,7 @@ form.styl
 
 .Form-buttons
   text-align                right
+  direction                 rtl
 
 .Form-Button
   margin-left               6px
