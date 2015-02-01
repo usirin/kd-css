@@ -1,0 +1,56 @@
+@css {
+/*
+Table styles
+-----------------------------
+table.styl
+*/
+}
+
+@import 'colors'
+@import 'typography'
+@import 'utils'
+
+.Table
+  width                     100%
+  font-size                 $fs-regular
+  color                     $color-primary-text
+  margin                    0.5em 0
+
+  td
+    padding                 0.7em 0.8em
+
+  tr
+    border-bottom           1px solid $gray-19
+
+  thead
+    font-size               $fs-small
+    color                   $color-light-text
+
+.Table--zebra
+  thead
+    border-bottom           1px solid $gray-19
+
+  tr
+    border                  none
+
+  tr:nth-child(2n) td
+    background-color        $gray-19
+
+    &~td
+      border-left           1px solid $white
+
+    &:first-child
+      border-radius         $border-radius 0 0 $border-radius
+
+    &:last-child
+      border-radius         0 $border-radius $border-radius 0
+
+.Table--verticalDividers
+  tbody td
+    border-left             1px solid $gray-19
+
+    &:first-child
+      border-left           none
+
+.Table--feedback tbody tr:hover td
+  background-color          $color-marked-text-bg

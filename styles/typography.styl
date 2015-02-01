@@ -12,6 +12,7 @@ typography.styl
 /* Constants */
 $helvetica-family           = 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'
 $adelle-family              = 'adelle-sans', 'sans-serif'
+$monospace-family           = 'Andale Mono', 'AndaleMono', 'monospace'
 
 $body-font-size             = 62.5%
 $body-line-height           = 1.6em
@@ -76,10 +77,21 @@ em
 
 code
 .u-code
+  font-family               $monospace-family
   padding                   .2em
   border-radius             $border-radius
   background-color          $color-code-bg
   color                     $color-code
+
+pre code
+pre .u-code
+  padding                   .5em .8em
+  display                   block
+  line-height               1.6em
+  background-color          $white
+  border                    1px solid $gray-18
+  font-size                 $fs-regular
+
 
 
 /* Headings */
@@ -89,7 +101,10 @@ h1, h2, h3, h4, h5, h6
   font-weight               $fw-semibold
   line-height               $body-line-height
   color                     $color-primary-text
-  margin                    0 0 1.0rem
+  margin                    1.0rem 0
+
+  &:first-child
+    margin-top              0
 
   small
   .u-small
@@ -131,6 +146,15 @@ p
   line-height               $body-line-height
   color                     $color-primary-text
   padding                   0.5em 0
+
+/* Info Bars */
+p.u-infoBar
+.u-infoBar
+  color                     $white
+  padding                   .4em .6em
+  margin-top                .5em
+  margin-bottom             .5em
+  border-radius             $border-radius
 
 
 /* Blockquotes */
